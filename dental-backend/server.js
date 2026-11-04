@@ -16,9 +16,9 @@ app.use((req, res, next) => {
   res.set({ 'X-Content-Type-Options': 'nosniff', 'Referrer-Policy': 'no-referrer', 'Cache-Control': 'no-store' });
   next();
 });
-app.use(cors({ origin(origin, callback) {
+app.use('/api', cors({ origin(origin, callback) {
   if (!origin || allowedOrigins.includes(origin)) return callback(null, true);
-  return callback(new Error('Origin not allowed'));
+  return callback(Object.assign(new Error('Origin not allowed'), { status: 403 }));
 }, methods: ['GET', 'POST', 'PATCH', 'DELETE', 'OPTIONS'], allowedHeaders: ['Content-Type', 'Authorization'], maxAge: 600 }));
 app.use(express.json({ limit: '16kb', strict: true }));
 const buckets = new Map();

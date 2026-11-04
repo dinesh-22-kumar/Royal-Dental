@@ -36,7 +36,7 @@ For a production frontend build, run `npm run build` in `dental`. Serve `dental/
 
 ### Host the full application from the repository root
 
-The root `package.json` provides the hosting platform's build and start commands. Use Node.js 22.5 or newer, run `npm install` from the repository root, and configure the platform to run `npm run build` followed by `npm start`. The build creates `dental/dist`; the API serves those files and handles `/api` requests on the same host. Set `FRONTEND_ORIGIN` to the exact public website origin and use persistent storage for the SQLite database.
+The root `package.json` provides the hosting platform's build and start commands. Use Node.js 22.5 or newer, run `npm install` from the repository root, and configure the platform to run `npm run build` followed by `npm start`. The build creates `dental/dist`; the API serves those files and handles `/api` requests on the same host. Add `FRONTEND_ORIGIN=https://your-domain.example` to the hosting service's environment variables, using the exact public website origin, and use persistent storage for the SQLite database. CORS is applied to API routes only; the same-origin frontend assets do not need CORS.
 
 ## Configuration
 
@@ -69,6 +69,7 @@ The SQLite file is `dental-backend/data/dental_clinic.db` and is excluded from G
 - `ERR_MODULE_NOT_FOUND` / `node:sqlite` unavailable: install Node 22.5+ and rerun `npm install` in `dental-backend`.
 - Browser shows API/network error: confirm the API is running on port 5000, then check `GET http://localhost:5000/api/health`.
 - CORS error outside local development: add the exact frontend origin (scheme, hostname, and port) to `FRONTEND_ORIGIN`, then restart the API.
+- Static CSS/JavaScript requests fail after hosting: rebuild and redeploy from the repository root with `npm run build` and `npm start`. Set `FRONTEND_ORIGIN` to the exact public origin for API requests; CORS is not needed for same-origin frontend assets.
 - Staff route returns `503`: configure a strong `ADMIN_API_TOKEN`; `401` means the bearer token is missing or incorrect.
 - Booking response says saved: the request is in SQLite as pending. Staff must follow up and confirm an actual appointment.
 
