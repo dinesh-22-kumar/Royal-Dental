@@ -1,8 +1,10 @@
 const express = require('express');
 const cors = require('cors');
 const crypto = require('crypto');
+const fs = require('fs');
+const path = require('path');
 const db = require('./db');
-require('dotenv').config();
+require('dotenv').config({ path: path.join(__dirname, '.env') });
 
 const app = express();
 const PORT = Number(process.env.PORT) || 5000;
@@ -339,6 +341,17 @@ app.get('/api/contacts', adminOnly, async (req, res) => {
     res.status(500).json({ success: false, error: 'Failed to fetch contact inquiries.' });
   }
 });
+
+const frontendDist = path.resolve(__dirname, '../dental/dist');
+if (fs.existsSync(frontendDist)) {
+  app.use(express.static(frontendDist));
+  app.use((req, res, next) => {
+    if (req.method !== 'GET' || req.path === '/api' || req.path.startsWith('/api/')) return next();
+    res.sendFile(path.join(frontendDist, 'index.html'), error => {
+      if (error) next(error);
+    });
+  });
+}
 
 // Start Express Server
 const server = app.listen(PORT, async () => {

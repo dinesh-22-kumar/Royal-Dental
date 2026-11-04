@@ -34,6 +34,10 @@ Open the local URL printed by Vite (normally `http://localhost:5173`). Vite forw
 
 For a production frontend build, run `npm run build` in `dental`. Serve `dental/dist` through your web server and configure that server to proxy `/api` to the backend. Set `FRONTEND_ORIGIN` to the exact public website origin(s). Use HTTPS and a persistent disk for SQLite.
 
+### Host the full application from the repository root
+
+The root `package.json` provides the hosting platform's build and start commands. Use Node.js 22.5 or newer, run `npm install` from the repository root, and configure the platform to run `npm run build` followed by `npm start`. The build creates `dental/dist`; the API serves those files and handles `/api` requests on the same host. Set `FRONTEND_ORIGIN` to the exact public website origin and use persistent storage for the SQLite database.
+
 ## Configuration
 
 Copy `dental-backend/.env.example` to `dental-backend/.env` and set:
