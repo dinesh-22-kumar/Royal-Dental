@@ -8,7 +8,7 @@ export default function TreatmentDetailPage() {
   const group = serviceGroups.find(([name]) => name === item.category);
   const related = group?.[1].filter((name) => name !== item.name).map((name) => treatments.find((treatment) => treatment.name === name)).filter(Boolean) || [];
   const bookingHref = `/booking?service=${encodeURIComponent(item.name)}`;
-  return <PageShell current="/services" title={`${item.name} | My Dental Clinic`}><main>
+  return <PageShell current="/services" title={`${item.name} | Royal Dental Care`}><main>
     <PageHero eyebrow={item.category} title={<>{item.name}<br/><em>care for your smile.</em></>} text={item.text} image={item.image}/>
     <section className="treatment-detail-section site-section"><div className="treatment-detail-copy"><span className="eyebrow">About this service</span><h2>Personal care, planned around you.</h2><p>{item.text}</p><p>Your dentist will assess your needs, explain suitable options, and discuss the next steps with you before treatment. The right approach depends on your individual examination.</p><a className="button button-dark" href={bookingHref}>Book an appointment <span>↗</span></a></div><div className="treatment-detail-note"><span>✳</span><div><b>What happens next?</b><p>Share this service with us when you request an appointment. Our team will contact you to discuss availability and help arrange a visit.</p></div></div></section>
     {related.length > 0 && <section className="related-services site-section"><SectionHeading eyebrow={item.category} title="Related services" text="Explore other care options in this area."/><div className="treatment-grid">{related.map((relatedItem, index) => <TreatmentCard key={relatedItem.name} item={relatedItem} index={index}/>)}</div></section>}
