@@ -42,7 +42,7 @@ function AboutJourney() {
 
 export default function AboutPage() {
   return <PageShell current="/about"><main><PageHero eyebrow="A little about us" title={<>Care built around<br/>
-  <em>your comfort.</em></>} text="We believe a better dental visit begins with trust, time, and a team that listens." image="hd/image-1.jpg"/>
+  <em>your comfort.</em></>} text="We believe a better dental visit begins with trust, time, and a team that listens." image="image-1.jpg"/>
   <section className="about-values site-section">
     <SectionHeading eyebrow="What matters to us" title="A few things you can always expect"/>
     <div className="values-grid"><article><span></span><h3>Compassion</h3>
@@ -54,14 +54,14 @@ export default function AboutPage() {
     </article><article><span></span><h3>Welcome for all ages</h3>
     <p>We aim to make the clinic a comfortable place for every generation.</p>
     </article></div></section><section className="about-story">
-      <img src="/assets/hd/image-8.jpg" alt="Dental instruments and a model of teeth" loading="lazy"/><div>
+      <img src="/assets/image-8.jpg" alt="Dental instruments and a model of teeth" loading="lazy"/><div>
         <span className="eyebrow">Our approach</span><h2>Every smile has its own story.</h2>
         <p>Established in 2002, Royal Dental Clinic was founded with a vision to provide quality dental care with compassion and excellence.Led by Dr. K. Saravanan, an experienced Oral & Maxillofacial Surgeon, and Dr. M. Amudha, a specialist in Periodontal Regenerative Surgery.With decades of combined dental experience, our doctors bring specialised clinical expertise and professional excellence.</p>
         <p>Dr. Saravanan has served in reputed dental institutions and continues as a Consultant Faciomaxillary Surgeon at Kauvery Hospital, Salem.Dr. Amudha provides specialised periodontal regenerative care as a consultant across reputed clinics and hospitals in Salem.Our commitment is to deliver trusted treatment, personalised care and healthy smiles through excellence in dentistry.</p>
         <a href="/contact" className="text-link">Come say hello <span>→</span></a>
         </div></section><AboutJourney/><section id="doctors" className="about-team-section site-section">
           <SectionHeading eyebrow="Our dental team" title="Meet the people behind your care" text="Royal Dental Care combines attentive conversations with thoughtful dental care, helping you understand your options at every step."/>
-          <div className="about-team-card"><img className="about-team-photo" src="/assets/hd/about-image-1.jpg" alt="A dentist discussing a dental model with a patient" loading="lazy"/><div className="about-team-copy"><img className="about-team-logo" src="/assets/rdcc-logo.png" alt="Royal Dental Care logo"/><span className="eyebrow">Patient-first care</span><h3>Clear guidance, from your first conversation.</h3><p>Tell us what matters to you. Our team will listen, explain suitable treatment options, and help you plan a comfortable next step.</p><div className="about-team-actions"><a className="button button-dark" href="/booking">Book an appointment <span>↗</span></a><a className="text-link" href="/contact">Contact the clinic <span>→</span></a></div></div></div>
+          <div className="about-team-card"><img className="about-team-photo" src="/assets/about-image-1.jpg" alt="A dentist discussing a dental model with a patient" loading="lazy"/><div className="about-team-copy"><img className="about-team-logo" src="/assets/rdcc-logo.png" alt="Royal Dental Care logo"/><span className="eyebrow">Patient-first care</span><h3>Clear guidance, from your first conversation.</h3><p>Tell us what matters to you. Our team will listen, explain suitable treatment options, and help you plan a comfortable next step.</p><div className="about-team-actions"><a className="button button-dark" href="/booking">Book an appointment <span>↗</span></a><a className="text-link" href="/contact">Contact the clinic <span>→</span></a></div></div></div>
         </section><section className="site-section"><SectionHeading eyebrow="How we care" title="The principles behind every visit"/>
           <div className="process-grid"><article>
             <span>01</span><h3>Listen first</h3>
