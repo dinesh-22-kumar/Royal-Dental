@@ -1,8 +1,8 @@
 export const treatments = [
-  { name: 'Decayed Tooth Filling / RCT', category: 'General dental care', image: 'root-canal-treatment.png', text: 'Restore teeth affected by decay with appropriate dental treatment. Fillings repair cavities, while root canal treatment may help save a tooth when the inner pulp becomes infected or damaged.' },
+  { name: 'Decayed Tooth Filling / RCT', category: 'General dental care', image: 'root-canal-treatment.jpg', text: 'Restore teeth affected by decay with appropriate dental treatment. Fillings repair cavities, while root canal treatment may help save a tooth when the inner pulp becomes infected or damaged.' },
   { name: 'Crowns for Fractured Teeth', category: 'General dental care', image: 'implant-closeup.jpg', text: 'Protect and restore weakened, cracked, or damaged teeth with a custom-designed dental crown. Treatment is planned to improve tooth function, durability, and appearance.' },
-  { name: 'Wisdom Teeth Removal', category: 'General dental care', image: 'wisdom-tooth-removal.png', text: 'Experiencing pain or discomfort from your wisdom teeth? Our dental team can assess your condition and recommend appropriate treatment to address impaction, overcrowding, or other concerns.' },
-  { name: 'Orofacial Pain Management', category: 'General dental care', image: 'orofacial-pain-map.png', text: 'Get professional assessment and guidance for pain affecting the teeth, jaw, facial muscles, and surrounding areas. Treatment recommendations are tailored to your symptoms and individual needs.' },
+  { name: 'Wisdom Teeth Removal', category: 'General dental care', image: 'wisdom-tooth-removal.jpg', text: 'Experiencing pain or discomfort from your wisdom teeth? Our dental team can assess your condition and recommend appropriate treatment to address impaction, overcrowding, or other concerns.' },
+  { name: 'Orofacial Pain Management', category: 'General dental care', image: 'orofacial-pain-map.jpg', text: 'Get professional assessment and guidance for pain affecting the teeth, jaw, facial muscles, and surrounding areas. Treatment recommendations are tailored to your symptoms and individual needs.' },
   { name: 'Dental Implants', category: 'Restorative & implant dentistry', image: 'image-2.jpg', text: 'A tooth-replacement option planned around your oral health, comfort, and individual needs.' },
   { name: 'Crown & Bridge', category: 'Restorative & implant dentistry', image: 'image-5.jpg', text: 'Restore the shape and function of damaged or missing teeth with a tailored plan.' },
   { name: 'Complete Dentures', category: 'Restorative & implant dentistry', image: 'image-6.jpg', text: 'Discuss complete tooth-replacement options designed for fit, comfort, and everyday use.' },
@@ -12,7 +12,7 @@ export const treatments = [
   { name: 'Gum Bleeding Treatment', category: 'Periodontal (gum) care', image: 'image-7.jpg', text: 'Find the cause of gum bleeding and receive guidance on suitable care.' },
   { name: 'Regenerative Gum & Bone Surgeries', category: 'Periodontal (gum) care', image: 'image-8.jpg', text: 'Specialist treatment planning for gum and bone concerns, based on clinical evaluation.' },
   { name: 'Smile Correction / Jaw Correction', category: 'Cosmetic & smile care', image: 'image-3.jpg', text: 'Discuss smile and jaw alignment concerns and the options available for your needs.' },
-  { name: 'Teeth Whitening', category: 'Cosmetic & smile care', image: 'teeth-whitening-before-after.png', text: 'Ask about professional whitening options and what may be suitable for your smile.' },
+  { name: 'Teeth Whitening', category: 'Cosmetic & smile care', image: 'teeth-whitening-before-after.jpg', text: 'Ask about professional whitening options and what may be suitable for your smile.' },
   { name: 'Esthetic Restorations', category: 'Cosmetic & smile care', image: 'image-1.jpg', text: 'Natural-looking restorations planned to improve the appearance and function of teeth.' },
   { name: 'Braces / Aligners', category: 'Cosmetic & smile care', image: 'image-3.jpg', text: 'Explore braces or clear aligners with an orthodontic assessment and personalised plan.' },
 ];
